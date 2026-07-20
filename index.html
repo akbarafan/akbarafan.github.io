@@ -1,96 +1,665 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Welcome To Akbar's Site</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="shortcut icon" href="images/Iconslogo/rsz_logo_1-150x150.png" />
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Bibismi Akbar Afandi — Developer Portfolio">
+  <meta name="author" content="Bibismi Akbar Afandi">
+  <title>Bibismi Akbar Afandi | Portfolio</title>
+  <link rel="shortcut icon" href="images/Iconslogo/rsz_logo_1-150x150.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
 
-    <style>
-      html,body{
-          background:#000;
-          margin:0;
-      }
-      .centered{
-          width:400px;
-          height:400px;
-          position:absolute;
-          top:50%;
-          left:50%;
-          transform:translate(-50%,-50%);
-          background:#000;
-          filter: blur(10px) contrast(20);
-      }
-      .circle-1,.circle-2{
-          width:70px;
-          height:70px;
-          position:absolute;
-          background:#fff;
-          border-radius:50%;
-          top:50%;left:50%;
-          transform:translate(-50%,-50%);
-      }
+  <!-- ===== SPOTLIGHTS (BG EFFECTS) ===== -->
+  <div class="spotlight-container">
+    <div class="spotlight-1"></div>
+    <div class="spotlight-2"></div>
+    <div class="spotlight-3"></div>
+  </div>
 
-      /*
-      The below code will animate the circle balls using css animation
-      */
-      .circle-1{
-          left:20%;
-          animation:osc-l 1.5s ease-in infinite;
-          background-color: #fff;
-      }
-      .circle-2{
-          left:80%;
-          animation:osc-r 1.5s ease-in infinite;
-          background: #2b2;
-      }
-      @keyframes osc-l{
-          0%{left:20%;}
-          50%{left:50%;}
-          100%{left:20%;}
-      }
-      @keyframes osc-r{
-          0%{left:80%;}
-          50%{left:50%;}
-          100%{left:80%;}
-      }
+  <!-- ===== NAVBAR ===== -->
+  <nav>
+    <a href="#home" class="logo">&lt;akbar.dev/&gt;</a>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home" class="active">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#showcase">Project</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
 
-      .text h1{
-          color: aliceblue;
-          top: 55%;
-          position: absolute;
-          left: 45%;
-          font-weight: bold;
-      }
-      .text h1:after{
-          content: ".";
-          position: absolute;
-          animation: caret infinite;
-          animation-duration: 1.5s;
-          animation-timing-function: steps(20, end);
-      }
-
-
-      @keyframes caret {
-          0%, 100% {
-            opacity: 0;
-          }
-          50% {
-            opacity: 1;
-          }
-        }
-    </style>
-  </head>
-  <body>
-    <div class="centered">
-      <div class="circle-1"></div>
-      <div class="circle-2"></div>
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="home">
+    <div class="hero-inner">
+      <div class="hero-text fade-up">
+        <p class="greeting">Hello, my name is</p>
+        <h1>Bibismi Akbar<br>Afandi</h1>
+        <div class="typing-line">
+          I am <span id="typing-text"></span><span id="cursor"></span>
+        </div>
+        <p class="desc">
+          I specialize in back-end architectures, robust enterprise systems, full stack development, and real-time IoT networks. I design scalable solutions that bridge tech with performance.
+        </p>
+        <div class="hero-actions">
+          <a href="#showcase" class="btn-primary">View My Work <i class="ri-arrow-right-line"></i></a>
+          <a href="#contact" class="btn-secondary">Contact Me</a>
+        </div>
+        <!-- Hero Social Links directly below buttons -->
+        <div class="hero-socials">
+          <a href="https://www.linkedin.com/in/akbarafndyy" target="_blank" title="LinkedIn"><i class="ri-linkedin-fill"></i></a>
+          <a href="https://github.com/Akbar27-05" target="_blank" title="GitHub"><i class="ri-github-fill"></i></a>
+        </div>
+      </div>
+      <div class="hero-image fade-up">
+        <div class="hero-img-container">
+          <div class="hexagon-bg"></div>
+          <div class="hexagon-img">
+            <img src="images/WhatsApp Image 2024-03-05 at 14.09.20_ab03f387-modified.png" alt="Bibismi Akbar Afandi">
+          </div>
+          <!-- Circular Rotating CV Download Badge SVG -->
+          <div class="cv-badge" onclick="window.open('#', '_blank')">
+            <svg viewBox="0 0 100 100">
+              <path id="circlePath" d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0" fill="transparent" />
+              <text fill="#fff" font-size="7.5" font-weight="800" letter-spacing="1.5">
+                <textPath href="#circlePath">✦ DOWNLOAD CV ✦ DOWNLOAD CV</textPath>
+              </text>
+            </svg>
+            <div class="cv-icon">
+              <i class="ri-download-line"></i>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="text"><h1>Loading&nbsp;</h1></div>
-    <script>
-      //The below script changes the page to home after 2.3s using timeout function.
-      setTimeout(function () {
-        window.location.href = "home.html";
-      }, 2300);
-    </script>
-  </body>
+  </section>
+
+  <!-- ===== HORIZONTAL MARQUEE STRIP ===== -->
+  <div class="marquee-container">
+    <div class="marquee-content" id="marqueeContent">
+      <span>SYSTEM ARCHITECT <i class="ri-sparkling-fill" style="color: #0d0a1b;"></i></span>
+      <span>WEB DEVELOPER <i class="ri-sparkling-fill" style="color: #0d0a1b;"></i></span>
+      <span>BACK-END DEVELOPER <i class="ri-sparkling-fill" style="color: #0d0a1b;"></i></span>
+      <span>IOT ENGINEER <i class="ri-sparkling-fill" style="color: #0d0a1b;"></i></span>
+      <span>TECH INSTRUCTOR <i class="ri-sparkling-fill" style="color: #0d0a1b;"></i></span>
+      <span>SERVER &amp; NETWORK INFRA <i class="ri-sparkling-fill" style="color: #0d0a1b;"></i></span>
+      <span>FRONT-END DEVELOPER <i class="ri-sparkling-fill" style="color: #0d0a1b;"></i></span>
+      <span>MOBILE DEVELOPER <i class="ri-sparkling-fill" style="color: #0d0a1b;"></i></span>
+    </div>
+  </div>
+
+  <!-- ===== ABOUT ME (GLOW SPLIT CAPSULE CARD) ===== -->
+  <section id="about">
+    <div class="about-card-split fade-in">
+      
+      <!-- Left Half: Personal Info & Interests -->
+      <div class="about-left-pane">
+        <h2>About Me</h2>
+        <p class="about-desc">
+          D3 Informatics Engineering student at PENS with a focus on Back-End Development and Web/Mobile Applications. Experienced in developing RESTful APIs using Laravel and applications built with React JS & React Native. Exposed to server & network infrastructure (VMware ESXi, Zabbix, MikroTik) and experienced as a Front-End and Web Development instructor.
+        </p>
+        <p class="about-desc">
+          Actively participating in training and technology projects to enhance professional competence. Currently working as a Full Stack Developer at Alugara Inovasi Utama and also as a Back-End Developer for a US-based LMS project.
+        
+        <!-- Two Column Section -->
+        <div class="about-columns">
+          
+          <!-- Column 1: Personal Details -->
+          <div class="details-column">
+            <h3>Personal Details</h3>
+            <div class="details-list">
+              <div class="details-row">
+                <span class="details-label">Age</span>
+                <span class="details-val">20 yrs old</span>
+              </div>
+              <div class="details-row">
+                <span class="details-label">Birthdate</span>
+                <span class="details-val">May 27, 2006</span>
+              </div>
+              <div class="details-row">
+                <span class="details-label">Phone</span>
+                <span class="details-val">+62 812-3214-5151</span>
+              </div>
+              <div class="details-row">
+                <span class="details-label">Email</span>
+                <span class="details-val">bibismiakbar@gmail.com</span>
+              </div>
+              <div class="details-row">
+                <span class="details-label">Address</span>
+                <span class="details-val">Sidoarjo, Jawa Timur</span>
+              </div>
+              <div class="details-row">
+                <span class="details-label">Education</span>
+                <span class="details-val">D3 Teknik Informatika — PENS</span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Column 2: Interests -->
+          <div class="interests-column">
+            <h3>Interests</h3>
+            <div class="interests-grid-box">
+              <div class="interest-item-box">
+                <i class="ri-book-read-line"></i>
+                <span>Reading</span>
+              </div>
+              <div class="interest-item-box">
+                <i class="ri-tv-2-line"></i>
+                <span>Watching</span>
+              </div>
+              <div class="interest-item-box">
+                <i class="ri-music-2-line"></i>
+                <span>Music</span>
+              </div>
+              <div class="interest-item-box">
+                <i class="ri-terminal-box-line"></i>
+                <span>Coding</span>
+              </div>
+              <div class="interest-item-box">
+                <i class="ri-cpu-line"></i>
+                <span>IoT Tech</span>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      
+      <!-- Right Half: Lanyard & Interactive Floating ID Card -->
+      <div class="about-right-pane">
+        <div class="lanyard-wrap">
+          <div class="lanyard-strap"></div>
+          <div class="lanyard-clip"></div>
+          <!-- ID Badge Target for Physics Controller in JS -->
+          <div class="id-badge" id="idBadge">
+            <div class="id-badge-frame">
+              <img src="images/WhatsApp Image 2024-03-05 at 14.09.20_ab03f387-modified.png" alt="Bibismi Akbar Afandi">
+              <span class="id-badge-role-pill">Back-end</span>
+            </div>
+            <h4>Back-end Dev</h4>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+
+  <!-- ===== EXPERIENCE & EDUCATION ===== -->
+  <section id="experience">
+    <div class="section-title fade-in">
+      <h2>Experience &amp; <span>Education</span></h2>
+      <p>My professional journey and academic background</p>
+    </div>
+
+    <div class="exp-grid">
+      <!-- Column 1: Experience Timeline -->
+      <div class="exp-col">
+        <h3><i class="ri-briefcase-line"></i> Experience</h3>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-body">
+              <span class="timeline-date">Jun 2025 — Nov 2025</span>
+              <h4>Full Stack Developer — IkanJabar</h4>
+              <p>GEMA Foundation partner. Developed a web-based fisheries monitoring application (ikanjabar.com) using Laravel for recording, managing, and monitoring fisheries data.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-body">
+              <span class="timeline-date">Jan 2025 — Now</span>
+              <h4>Back-End Developer — Encore LMS</h4>
+              <p>Developed RESTful API using Laravel for a React Native-based LMS. Multi-role (Admin, Instructor, Family) with class management, enrollment, attendance, assignments, and course purchasing.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-body">
+              <span class="timeline-date">Oct 2024 — Dec 2024</span>
+              <h4>Server Infrastructure &amp; Network Assistant</h4>
+              <p>GEMA Foundation — Bandung. Configured VMware ESXi, implemented Zabbix server monitoring, installed server OS, network crimping, and MikroTik configuration via Winbox.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-body">
+              <span class="timeline-date">Aug 2024</span>
+              <h4>Production Monitoring System Developer</h4>
+              <p>PT Suar Energi Futura — Jambi. Factory visit &amp; development of a biomass production monitoring application (tankos) with raw material volume recording and monitoring data presentation.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-body">
+              <span class="timeline-date">Jul 2024</span>
+              <h4>FE &amp; BE Instructor — GEMA Foundation</h4>
+              <p>Bandung. Mentored ReactJS (FrontEnd) and Laravel API (BackEnd) training, teaching Laravel and ReactJS integration for dynamic web applications.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-body">
+              <span class="timeline-date">May 2024</span>
+              <h4>Web Development Instructor</h4>
+              <p>Padepokan Seameo — Bandung. Offline mentor for HTML, CSS, JS as learning media for students departing to Thailand.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-body">
+              <span class="timeline-date">Jan 2024 — Mar 2024</span>
+              <h4>Front End Instructor "React JS"</h4>
+              <p>BBPPMPV BOE — Malang. Offline mentor for React JS, teaching React JS implementation for FrontEnd and project creation.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Column 2: Education + Training -->
+      <div class="exp-col">
+        <h3><i class="ri-graduation-cap-line"></i> Education</h3>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-body">
+              <span class="timeline-date">Aug 2024 — Now</span>
+              <h4>Politeknik Elektronika Negeri Surabaya</h4>
+              <p>D3 Teknik Informatika — Kota Surabaya, Indonesia</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-body">
+              <span class="timeline-date">Jun 2021 — May 2024</span>
+              <h4>SMKN 2 Buduran — Sidoarjo</h4>
+              <p>Software Engineering. Served twice as Final Project / Thesis Lead.</p>
+            </div>
+          </div>
+        </div>
+
+        <h3 style="margin-top: 32px;"><i class="ri-award-line"></i> Training &amp; Certification</h3>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-body">
+              <span class="timeline-date">Aug 2025 — Sep 2025</span>
+              <h4>Cloud Computing — AWS</h4>
+              <p>EC2, S3, IAM, basic cloud architecture</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-body">
+              <span class="timeline-date">Jun 2024 — Jul 2024</span>
+              <h4>Data Science — GEMA Foundation</h4>
+              <p>Basic Python, data analysis &amp; visualization, basic machine learning, Kaggle competition.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-body">
+              <span class="timeline-date">Apr 2024 — May 2024</span>
+              <h4>React Native — Udemy</h4>
+              <p>Online course: build application with React Native.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-body">
+              <span class="timeline-date">Feb 2024 — May 2024</span>
+              <h4>BBPPMPV BOE Malang — Multiple Training</h4>
+              <p>Front End (React JS), Back End (Laravel), Basic Programming (HTML, CSS, Bootstrap), Database SQL.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-body">
+              <span class="timeline-date">Apr 2023 — Sep 2023</span>
+              <h4>IT Software — IT Brain Indonesia</h4>
+              <p>Mobile apps (Java Android), Desktop apps (C# Visual Studio).</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="showcase">
+    <div class="showcase-title-wrap fade-in">
+      <h2><span class="white-let">P</span>ortfolio <span class="white-let">S</span>howcase</h2>
+      <p>Explore my journey through projects, certifications, and technical expertise. Each section represents a milestone in my continuous learning path.</p>
+    </div>
+
+    <!-- Capsule Nav Tab Bar -->
+    <div class="showcase-nav-container fade-in">
+      <div class="showcase-nav">
+        <button class="showcase-tab active" data-tab="projects"><i class="ri-code-s-slash-line"></i> PROJECTS</button>
+        <button class="showcase-tab" data-tab="skills"><i class="ri-lightbulb-line"></i> MY SKILLS</button>
+      </div>
+    </div>
+
+    <!-- PROJECTS SUBSECTION (Pane 1 - Default Active) -->
+    <div class="showcase-content-pane active" id="pane-projects">
+      <div class="subsection-title">
+        <h3>Featured Projects</h3>
+        <p>A selection of my best engineering work</p>
+      </div>
+      <div class="projects-grid">
+        <div class="project-card fade-in">
+          <div class="project-img" style="background: linear-gradient(135deg, #0d9488, #0891b2);">
+            <i class="ri-ship-line"></i>
+          </div>
+          <div class="project-body">
+            <span class="project-tag">Full Stack</span>
+            <h3>eMERTI — Vessel Monitoring</h3>
+            <div class="project-sub">Alugara Inovasi Utama</div>
+            <div class="project-desc">
+              Real-time maritime IoT tracking. Raspberry Pi devices stream RPM, GPS, and fuel metrics via MQTT to a Go (Gin) backend, visualised in Next.js Leaflet maps.
+            </div>
+            <div class="project-tech">
+              <span>Go</span><span>Next.js</span><span>TimescaleDB</span><span>MQTT</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Akbar27-05" target="_blank" title="GitHub"><i class="ri-github-fill"></i></a>
+              <a href="#" target="_blank" title="Live Demo"><i class="ri-external-link-line"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card fade-in">
+          <div class="project-img" style="background: linear-gradient(135deg, #4f46e5, #7c3aed);">
+            <i class="ri-file-list-3-line"></i>
+          </div>
+          <div class="project-body">
+            <span class="project-tag">Full Stack</span>
+            <h3>SI-IJEPA — Survey System</h3>
+            <div class="project-sub">PT Surveyor Indonesia</div>
+            <div class="project-desc">
+              Survey management for Indonesia-Japan trade agreement. Go backend, Next.js 14 frontend, QR codes, PDF exports. Dockerized with Cloudflare Tunnel.
+            </div>
+            <div class="project-tech">
+              <span>Go</span><span>Next.js 14</span><span>PostgreSQL</span><span>Docker</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Akbar27-05" target="_blank" title="GitHub"><i class="ri-github-fill"></i></a>
+              <a href="#" target="_blank" title="Live Demo"><i class="ri-external-link-line"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card fade-in">
+          <div class="project-img" style="background: linear-gradient(135deg, #059669, #10b981);">
+            <i class="ri-leaf-line"></i>
+          </div>
+          <div class="project-body">
+            <span class="project-tag">Full Stack / ERP</span>
+            <h3>Carbon Trade Platform</h3>
+            <div class="project-sub">Alugara Inovasi Utama</div>
+            <div class="project-desc">
+              Carbon credit platform built on Symfony 8.1 (PHP 8.4) + TimescaleDB. Track emissions across sites, approval workflows, and RBAC.
+            </div>
+            <div class="project-tech">
+              <span>Symfony 8.1</span><span>PHP 8.4</span><span>TimescaleDB</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Akbar27-05" target="_blank" title="GitHub"><i class="ri-github-fill"></i></a>
+              <a href="#" target="_blank" title="Live Demo"><i class="ri-external-link-line"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 48px;">
+        <a href="projects.html" class="btn-primary" style="display: inline-flex;">See More Projects <i class="ri-arrow-right-line"></i></a>
+      </div>
+    </div>
+
+    <!-- SKILLS SUBSECTION (Pane 2) -->
+    <div class="showcase-content-pane" id="pane-skills">
+      <div class="subsection-title">
+        <h3>Tools &amp; Technologies</h3>
+        <p>My Professional Skills</p>
+      </div>
+      <!-- 5-Column Grid exactly matching reference style -->
+      <div class="skills-grid-new">
+        <!-- Card 1 -->
+        <div class="skill-card-new">
+          <div class="skill-icon-wrap"><img src="https://cdn.simpleicons.org/laravel/ff2d20" width="40" height="40" alt="Laravel"></div>
+          <h4><span class="bold-white">L</span>aravel</h4>
+          <span class="skill-tag">Framework</span>
+        </div>
+        <!-- Card 2 -->
+        <div class="skill-card-new">
+          <div class="skill-icon-wrap"><i class="ri-reactjs-fill" style="color: #61dafb;"></i></div>
+          <h4><span class="bold-white">R</span>eact JS</h4>
+          <span class="skill-tag">Framework</span>
+        </div>
+        <!-- Card 3 -->
+        <div class="skill-card-new">
+          <div class="skill-icon-wrap"><i class="ri-tailwind-css-fill" style="color: #38bdf8;"></i></div>
+          <h4><span class="bold-white">T</span>ailwind CSS</h4>
+          <span class="skill-tag">Framework</span>
+        </div>
+        <!-- Card 4 -->
+        <div class="skill-card-new">
+          <div class="skill-icon-wrap"><i class="ri-javascript-fill" style="color: #f7df1e;"></i></div>
+          <h4><span class="bold-white">J</span>avaScript</h4>
+          <span class="skill-tag">Language</span>
+        </div>
+        <!-- Card 5 -->
+        <div class="skill-card-new">
+          <div class="skill-icon-wrap"><img src="https://cdn.simpleicons.org/go/00ADD8" width="40" height="40" alt="Go"></div>
+          <h4><span class="bold-white">G</span>o (Golang)</h4>
+          <span class="skill-tag">Language</span>
+        </div>
+        <!-- Card 6 -->
+        <div class="skill-card-new">
+          <div class="skill-icon-wrap"><i class="ri-github-fill" style="color: #fff;"></i></div>
+          <h4><span class="bold-white">G</span>itHub</h4>
+          <span class="skill-tag">Repository</span>
+        </div>
+        <!-- Card 7 -->
+        <div class="skill-card-new">
+          <div class="skill-icon-wrap"><img src="https://cdn.simpleicons.org/symfony/000000" width="40" height="40" alt="Symfony"></div>
+          <h4><span class="bold-white">S</span>ymfony</h4>
+          <span class="skill-tag">Framework</span>
+        </div>
+        <!-- Card 8 -->
+        <div class="skill-card-new">
+          <div class="skill-icon-wrap"><img src="https://cdn.simpleicons.org/postgresql/336791" width="40" height="40" alt="PostgreSQL"></div>
+          <h4><span class="bold-white">P</span>ostgreSQL</h4>
+          <span class="skill-tag">Database</span>
+        </div>
+        <!-- Card 9 -->
+        <div class="skill-card-new">
+          <div class="skill-icon-wrap"><img src="https://cdn.simpleicons.org/docker/2496ed" width="40" height="40" alt="Docker"></div>
+          <h4><span class="bold-white">D</span>ocker</h4>
+          <span class="skill-tag">DevOps</span>
+        </div>
+        <!-- Card 10 -->
+        <div class="skill-card-new">
+          <div class="skill-icon-wrap"><i class="ri-html5-fill" style="color: #e34f26;"></i></div>
+          <h4><span class="bold-white">H</span>TML5</h4>
+          <span class="skill-tag">Language</span>
+        </div>
+        <!-- Card 11 -->
+        <div class="skill-card-new">
+          <div class="skill-icon-wrap"><i class="ri-css3-fill" style="color: #1572b6;"></i></div>
+          <h4><span class="bold-white">C</span>SS3</h4>
+          <span class="skill-tag">Language</span>
+        </div>
+        <!-- Card 12 -->
+        <div class="skill-card-new">
+          <div class="skill-icon-wrap"><img src="https://cdn.simpleicons.org/kotlin/7F52FF" width="40" height="40" alt="Kotlin"></div>
+          <h4><span class="bold-white">K</span>otlin</h4>
+          <span class="skill-tag">Language</span>
+        </div>
+        <!-- Card 13 -->
+        <div class="skill-card-new">
+          <div class="skill-icon-wrap"><img src="https://cdn.simpleicons.org/odoo/A246CF" width="40" height="40" alt="Odoo"></div>
+          <h4><span class="bold-white">O</span>doo 16</h4>
+          <span class="skill-tag">ERP Customizer</span>
+        </div>
+        <!-- Card 14 -->
+        <div class="skill-card-new">
+          <div class="skill-icon-wrap"><i class="ri-wireless-charging-line" style="color: #00a8e8;"></i></div>
+          <h4><span class="bold-white">M</span>QTT IoT</h4>
+          <span class="skill-tag">Protocol</span>
+        </div>
+        <!-- Card 15 -->
+        <div class="skill-card-new">
+          <div class="skill-icon-wrap"><img src="https://cdn.simpleicons.org/vmware/607078" width="40" height="40" alt="VMware"></div>
+          <h4><span class="bold-white">V</span>Mware ESXi</h4>
+          <span class="skill-tag">Virtualization</span>
+        </div>
+        <!-- Card 16 -->
+        <div class="skill-card-new">
+          <div class="skill-icon-wrap"><i class="ri-reactjs-fill" style="color: #61dafb;"></i></div>
+          <h4><span class="bold-white">R</span>eact Native</h4>
+          <span class="skill-tag">Mobile</span>
+        </div>
+        <!-- Card 17 -->
+        <div class="skill-card-new">
+          <div class="skill-icon-wrap"><img src="https://cdn.simpleicons.org/python/3776AB" width="40" height="40" alt="Python"></div>
+          <h4><span class="bold-white">P</span>ython</h4>
+          <span class="skill-tag">Language</span>
+        </div>
+        <!-- Card 18 -->
+        <div class="skill-card-new">
+          <div class="skill-icon-wrap"><i class="ri-nodejs-line" style="color: #339933;"></i></div>
+          <h4><span class="bold-white">N</span>ode.js</h4>
+          <span class="skill-tag">Runtime</span>
+        </div>
+        <!-- Card 19 -->
+        <div class="skill-card-new">
+          <div class="skill-icon-wrap"><img src="https://cdn.simpleicons.org/mysql/4479A1" width="40" height="40" alt="MySQL"></div>
+          <h4><span class="bold-white">M</span>ySQL</h4>
+          <span class="skill-tag">Database</span>
+        </div>
+        <!-- Card 20 -->
+        <div class="skill-card-new">
+          <div class="skill-icon-wrap"><img src="https://cdn.simpleicons.org/mongodb/47A248" width="40" height="40" alt="MongoDB"></div>
+          <h4><span class="bold-white">M</span>ongoDB</h4>
+          <span class="skill-tag">Database</span>
+        </div>
+        <!-- Card 21 -->
+        <div class="skill-card-new">
+          <div class="skill-icon-wrap"><i class="ri-cloud-line" style="color: #FF9900;"></i></div>
+          <h4><span class="bold-white">A</span>WS</h4>
+          <span class="skill-tag">Cloud</span>
+        </div>
+        <!-- Card 22 -->
+        <div class="skill-card-new">
+          <div class="skill-icon-wrap"><img src="https://cdn.simpleicons.org/codeigniter/EE4623" width="40" height="40" alt="CodeIgniter"></div>
+          <h4><span class="bold-white">C</span>odeIgniter</h4>
+          <span class="skill-tag">Framework</span>
+        </div>
+        <!-- Card 23 -->
+        <div class="skill-card-new">
+          <div class="skill-icon-wrap">
+            <svg viewBox="0 0 128 128" width="40" height="40" fill="#ED8B00" xmlns="http://www.w3.org/2000/svg">
+              <path d="M47.617 98.12s-4.767 2.774 3.397 3.71c9.892 1.13 14.947.968 25.845-1.092 0 0 2.871 1.795 6.873 3.351-24.439 10.47-55.308-.607-36.115-5.969zm-2.988-13.665s-5.348 3.959 2.823 4.805c10.567 1.091 18.91 1.18 33.354-1.6 0 0 1.993 2.025 5.132 3.131-29.542 8.64-62.446.68-41.309-6.336z"/>
+              <path d="M69.802 61.271c6.025 6.935-1.58 13.17-1.58 13.17s15.289-7.891 8.269-17.777c-6.559-9.215-11.587-13.792 15.635-29.58 0 .001-42.731 10.67-22.324 34.187z"/>
+              <path d="M102.123 108.229s3.529 2.91-3.888 5.159c-14.102 4.272-58.706 5.56-71.094.171-4.451-1.938 3.899-4.625 6.526-5.192 2.739-.593 4.303-.485 4.303-.485-4.953-3.487-32.013 6.85-13.743 9.815 49.821 8.076 90.817-3.637 77.896-9.468zM49.912 70.294s-22.686 5.389-8.033 7.348c6.188.828 18.518.638 30.011-.326 9.39-.789 18.813-2.474 18.813-2.474s-3.308 1.419-5.704 3.053c-23.042 6.061-67.544 3.238-54.731-2.958 10.832-5.239 19.644-4.643 19.644-4.643zm40.697 22.747c23.421-12.167 12.591-23.86 5.032-22.285-1.848.385-2.677.72-2.677.72s.688-1.079 2-1.543c14.953-5.255 26.451 15.503-4.823 23.725 0-.002.359-.327.468-.617z"/>
+              <path d="M76.491 1.587S89.459 14.563 64.188 34.51c-20.266 16.006-4.621 25.13-.007 35.559-11.831-10.673-20.509-20.07-14.688-28.815C58.041 28.42 81.722 22.195 76.491 1.587z"/>
+              <path d="M52.214 126.021c22.476 1.437 57-.8 57.817-11.436 0 0-1.571 4.032-18.577 7.231-19.186 3.612-42.854 3.191-56.887.874 0 .001 2.875 2.381 17.647 3.331z"/>
+            </svg>
+          </div>
+          <h4><span class="bold-white">J</span>ava</h4>
+          <span class="skill-tag">Language</span>
+        </div>
+        <!-- Card 24 -->
+        <div class="skill-card-new">
+          <div class="skill-icon-wrap"><i class="ri-bootstrap-line" style="color: #7952B3;"></i></div>
+          <h4><span class="bold-white">B</span>ootstrap</h4>
+          <span class="skill-tag">Framework</span>
+        </div>
+        <!-- Card 25 -->
+        <div class="skill-card-new">
+          <div class="skill-icon-wrap"><img src="https://cdn.simpleicons.org/mikrotik/2C3E50" width="40" height="40" alt="MikroTik"></div>
+          <h4><span class="bold-white">M</span>ikroTik</h4>
+          <span class="skill-tag">Network</span>
+        </div>
+      </div>
+
+      <!-- WHAT I BRING TO THE TABLE? SECTION (inside MY SKILLS tab) -->
+      <div class="traits-title-wrap fade-in">
+        <h2>What I Bring to the Table?</h2>
+        <p>My Personal Traits</p>
+      </div>
+      <div class="traits-grid">
+        <div class="trait-card-new fade-in">
+          <div class="trait-icon-box"><i class="ri-brain-line"></i></div>
+          <h4>Analytical Mindset</h4>
+          <p>Designing highly robust backend architectures and scalable database systems for optimal runtime performance.</p>
+        </div>
+        <div class="trait-card-new fade-in">
+          <div class="trait-icon-box"><i class="ri-refresh-line"></i></div>
+          <h4>Adaptable &amp; Fast</h4>
+          <p>Rapidly mastering modern frameworks (Symfony, Go, React, Laravel) as enterprise challenges demand.</p>
+        </div>
+        <div class="trait-card-new fade-in">
+          <div class="trait-icon-box"><i class="ri-cpu-line"></i></div>
+          <h4>IoT Innovator</h4>
+          <p>Integrating Raspberry Pi hardware edge networks seamlessly with cloud dashboards over low-latency MQTT channels.</p>
+        </div>
+        <div class="trait-card-new fade-in">
+          <div class="trait-icon-box"><i class="ri-team-line"></i></div>
+          <h4>Technical Educator</h4>
+          <p>Sharing complex software development paradigms clearly as a tech instructor for junior developers and students.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section id="contact">
+    <div class="contact-inner">
+      <div class="contact-info fade-in">
+        <h2>Get in <span>touch</span></h2>
+        <p>Have questions about my projects or want to collaborate? Reach out anytime — I am always happy to chat about systems, IoT, and software design.</p>
+        <div class="contact-details">
+          <div class="contact-detail-item">
+            <i class="ri-mail-fill"></i>
+            <span>bibismiakbar@gmail.com</span>
+          </div>
+          <div class="contact-detail-item">
+            <i class="ri-phone-fill"></i>
+            <span>+62 812-3214-5151</span>
+          </div>
+          <div class="contact-detail-item">
+            <i class="ri-map-pin-fill"></i>
+                <span>Sidoarjo, Jawa Timur</span>
+          </div>
+        </div>
+        <div class="social-links">
+          <a href="https://github.com/Akbar27-05" target="_blank" title="GitHub"><i class="ri-github-fill"></i></a>
+          <a href="https://www.linkedin.com/in/akbarafndyy" target="_blank" title="LinkedIn"><i class="ri-linkedin-fill"></i></a>
+          <a href="https://www.instagram.com/akbarafndyy" target="_blank" title="Instagram"><i class="ri-instagram-fill"></i></a>
+          <a href="mailto:bibismiakbar@gmail.com" title="Email"><i class="ri-mail-fill"></i></a>
+        </div>
+      </div>
+      <form class="contact-form fade-in" id="contactForm">
+        <input type="text" id="name" placeholder="Your Name" required>
+        <input type="email" id="email" placeholder="Your Email" required>
+        <input type="text" id="subject" placeholder="Subject" required>
+        <textarea id="message" placeholder="Your Message" required></textarea>
+        <button type="submit" id="submitBtn">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <p>Built by <a href="#">Bibismi Akbar Afandi</a> &copy; <span id="year"></span></p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
 </html>
